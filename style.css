@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;400;700&display=swap');
+
+:root{
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+    --VeryDarkBlueOp: hsla(213, 5%, 35%, 0.637);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}   
+
+body{
+    background-color: var(--VeryDarkBlue);
+    color: var(--White);
+    font-family: 'Overpass', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items:center ;
+    flex-direction: column;
+}
+section{
+    background-color: var(--DarkBlue);
+    width: 30%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.5rem;
+
+}
+
+
+#star-img{
+    background-color: var(--VeryDarkBlueOp);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+}
+h1{
+    margin-bottom: 10px;
+
+}
+p{
+    margin-bottom: 15px;
+    color: var(--LightGrey);
+    font-size: 15px;
+    line-height: 1.5;
+}
+.stars{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.stars button{
+    color: var(--White);
+    padding: 15px 20px;
+    background-color: var(--VeryDarkBlueOp);
+    border: none;
+    border-radius: 50%;
+}
+
+.stars button:hover{
+    background-color: var(--LightGrey);
+    transform: scale(1.2);
+}
+.stars button.active{
+    background-color: var(--Orange);
+}
+section #a{
+    text-transform: uppercase;
+    align-self: center;
+    text-decoration: none;
+    color: var(--White);
+    background-color: var(--Orange);
+    padding: 0.5rem 40% ;
+    border-radius: 1.5rem;
+    
+}
+section #a:hover{
+    background-color: var(--White);
+    color: var(--Orange);
+}
+
+
+#post img{
+    height: 45%;
+    width: 45%;
+    align-self: center;
+    margin-bottom: 15px;
+}
+#post .star-review{
+    color: var(--Orange);
+    align-self: center;
+    padding: 5px 10px;
+    background-color: var(--VeryDarkBlueOp);
+    border-radius: 1.5rem;
+}
+#post h1{
+    align-self: center;
+}
+#post p{
+    text-align: center;
+}
+
+
+.display{
+    display: flex;
+}
+.undisplay{
+    display: none;
+}
+@media screen and (max-width:950px) {
+    section{
+        width: 50%;
+    }
+}
+@media screen and (max-width:650px) {
+    section{
+        width:80%;
+    }
+    .stars button{
+        padding: 10px 15px;
+    }   
+
+}
